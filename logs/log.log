@@ -1,0 +1,9 @@
+2023-03-26 20:20:40 DEBUG BotService:64 - /addincome
+2023-03-26 20:20:50 DEBUG BotService:64 - /addspend
+2023-03-26 20:20:58 DEBUG BotService:64 - /currentrates
+2023-03-26 20:22:50 DEBUG BotService:63 - /currentrates
+2023-03-26 20:23:34 DEBUG BotService:63 - /currentrates
+2023-03-26 20:23:40 DEBUG BotService:63 - /addincome
+2023-03-26 20:23:45 DEBUG BotService:63 - 250
+2023-03-26 20:23:51 DEBUG BotService:63 - /addspend
+2023-03-26 20:23:54 DEBUG BotService:63 - 14

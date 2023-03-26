@@ -21,12 +21,11 @@ public class CentralRussianBankService extends WebServiceTemplate {
     public List<ValuteCursOnDate> getCurrenciesFromCbr() throws DatatypeConfigurationException {
         final GetCursOnDateXml getCursOnDateXML = new GetCursOnDateXml();
         GregorianCalendar cal = new GregorianCalendar();
-        cal.setTime(new Date());
+        cal.setTime(new Date(System.currentTimeMillis()));
 
         XMLGregorianCalendar xmlGregCal = DatatypeFactory.newInstance().newXMLGregorianCalendar(cal);
         getCursOnDateXML.setOnDate(xmlGregCal);
 
-        System.out.println(getCursOnDateXML);
         GetCursOnDateXmlResponse response = (GetCursOnDateXmlResponse) marshalSendAndReceive(cbrApiUrl, getCursOnDateXML);
 
         if (response == null) {
