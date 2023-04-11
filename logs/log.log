@@ -7,3 +7,12 @@
 2023-03-26 20:23:45 DEBUG BotService:63 - 250
 2023-03-26 20:23:51 DEBUG BotService:63 - /addspend
 2023-03-26 20:23:54 DEBUG BotService:63 - 14
+2023-03-28 21:37:44 DEBUG BotService:66 - /currentrates
+2023-03-28 21:37:59 DEBUG BotService:66 - /addincome
+2023-03-28 21:38:02 DEBUG BotService:66 - /addspend
+2023-03-28 21:45:47 DEBUG BotService:67 - /currentrates
+2023-03-28 21:48:24 DEBUG BotService:67 - /currentrates
+2023-03-28 21:50:35 DEBUG BotService:67 - /currentrates
+2023-03-28 22:07:07 DEBUG BotService:67 - /addspend
+2023-03-30 08:44:26 DEBUG BotService:67 - Привет
+2023-04-11 22:22:57 DEBUG BotService:67 - /currentrates

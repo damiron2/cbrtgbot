@@ -9,12 +9,16 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import javax.xml.datatype.DatatypeConfigurationException;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -63,6 +67,7 @@ public class BotService extends TelegramLongPollingBot {
         log.debug(message.getText());
         try {
             SendMessage response = new SendMessage();
+            SendAudio sendAudio = new SendAudio();
             Long chatId = message.getChatId();
             response.setChatId(String.valueOf(chatId));
             if (GET_COURSES.equalsIgnoreCase(message.getText())) {
@@ -79,6 +84,7 @@ public class BotService extends TelegramLongPollingBot {
             }
             putPrevCommand(message.getChatId(), message.getText());
             execute(response);
+
 
             if (activeChatRepository.findActiveChatByChatId(chatId).isEmpty()) {
                 ActiveChat activeChat = new ActiveChat();
